@@ -1,28 +1,28 @@
-import './Carditem.css'
-
-import React, {useState} from 'react'
+import "./Carditem.css";
 
 const CardItem = (props) => {
+  console.log(props);
 
-    const updateList = (e) => {
-        let type = "delete"
-        if(e.target.innerText=="➖"){
-            type="decr"
-        }
-        else if(e.target.innerText=="➕"){
-            type = "incr"
-        }
-        props.fn(type, props.idx)
+  const updateList = (e) => {
+    let type = "delete";
+    if (e.target.innerText === "➖") {
+      type = "decr";
+    } else if (e.target.innerText === "➕") {
+      type = "incr";
     }
+    props.fn(type, props.idx);
+  };
 
   return (
-    <div className='item'>
+    <div className="item">
       <div className="details">
         <img src={props.itemData.img} alt="" />
         <div className="name-price">
-            <h2>{props.itemData.title}</h2>
-            <p>{props.itemData.price}</p>
-            <button onClick={updateList}><i className='bx bxs-trash'></i></button>
+          <h2>{props.itemData.title}</h2>
+          <p>$ {props.itemData.price}</p>
+          <button onClick={updateList}>
+            <i className="bx bxs-trash"></i>
+          </button>
         </div>
       </div>
       <div className="quantity">
@@ -31,7 +31,7 @@ const CardItem = (props) => {
         <button onClick={updateList}>➖</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CardItem
+export default CardItem;

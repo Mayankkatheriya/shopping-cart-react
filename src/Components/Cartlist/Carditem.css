@@ -27,3 +27,15 @@
     justify-content: space-between;
     gap: 10px;
 }
+
+.name-price {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.name-price button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}

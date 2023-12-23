@@ -6,6 +6,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    box-shadow: 0 2px 10px 0 #aaa;
 }
 
 .nav h1 {

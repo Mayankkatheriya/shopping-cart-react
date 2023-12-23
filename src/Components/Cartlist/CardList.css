@@ -1,13 +1,55 @@
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 1rem;
     align-items: center;
     width: 100%;
-    padding-top: 2rem;
+    padding: 2rem 1rem;
+}
+
+.inputs {
+    padding: .5rem 1rem;
+    width: 100%;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputs input {
+    background: transparent;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed rgb(26, 26, 26);
+}
+
+.inputs input::placeholder {
+    font-size: 1rem;
+}
+
+.inputs button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 250);
+    color: #fff;
+    outline: none;
+    border: 2px solid rgb(59, 59, 250);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.inputs button:hover {
+    background-color: transparent;
+    color: rgb(59, 59, 250);
 }
 
 .card-list {
-    border: 2px solid red;
     width: 100%;
     max-width: 700px;
     display: flex;
@@ -16,4 +58,33 @@ main {
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+}
+.item-total {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: .5rem 2rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.item-total p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.clear-btn {
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgb(255, 34, 34);
+    color: #fff;
+    border: 2px solid rgb(255, 34, 34);
+}
+
+.clear-btn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 34, 34, .8);
 }
