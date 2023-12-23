@@ -78,7 +78,7 @@ const CardList = (props) => {
 
   //clear button function
   const clearList = () => {
-    setTotalPrice(0);
+    setTotalPrice("0.00");
     setProductList([]);
     props.updatefn([]);
   };
