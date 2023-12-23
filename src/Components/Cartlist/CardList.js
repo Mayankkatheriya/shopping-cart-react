@@ -124,7 +124,7 @@ const CardList = (props) => {
         })}
       </div>
       <div
-        style={{ display: totalPrice == 0 ? "none" : "flex" }}
+        style={{ display: totalPrice === "0.00" ? "none" : "flex" }}
         className="item-total"
       >
         <p>Total</p>
