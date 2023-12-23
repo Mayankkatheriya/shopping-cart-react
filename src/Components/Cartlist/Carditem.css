@@ -39,3 +39,20 @@
     height: 30px;
     font-size: 20px;
 }
+
+@media screen and (max-width: 450px) {
+    .item {
+        justify-content: center;
+    }
+    .item .details {
+        justify-content: center;
+    }
+    .item .details img {
+        margin-right: 0;
+    }
+    .name-price {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
