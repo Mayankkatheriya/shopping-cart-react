@@ -19,7 +19,7 @@ const CardItem = (props) => {
         <img src={props.itemData.img} alt="" />
         <div className="name-price">
           <h2>{props.itemData.title}</h2>
-          <p>$ {props.itemData.price}</p>
+          <h4>$ {props.itemData.price}</h4>
           <button onClick={updateList}>
             <i className="bx bxs-trash"></i>
           </button>
@@ -27,7 +27,7 @@ const CardItem = (props) => {
       </div>
       <div className="quantity">
         <button onClick={updateList}>➕</button>
-        <p className="item-count">{props.itemData.amount}</p>
+        <h3 className="item-count">{props.itemData.amount}</h3>
         <button onClick={updateList}>➖</button>
       </div>
     </div>
