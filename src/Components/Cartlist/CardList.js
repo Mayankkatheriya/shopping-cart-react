@@ -14,12 +14,15 @@ const CardList = (props) => {
   let [inputAmount, setInputAmount] = useState("");
   let [inputPrice, setInputPrice] = useState("");
 
+  // common function for the inputs onchange event
   const addItemInputs = (e, fn) => {
-    console.log(e.target.value, typeof e.target.value);
     fn(e.target.value);
   };
 
+
+  // add a new item to the cart
   const addToCart = () => {
+    //conditions checks for inputs
     if(inputTitle === "" || inputPrice === "" || inputAmount === "") {
         alert('Please fill out all fields');
         return;
@@ -28,6 +31,8 @@ const CardList = (props) => {
         alert('The price and amount must be greater than or equal to 1')
         return;
     }
+
+    //create new data for the cart
     let newdataArray = [
       ...productList,
       {
@@ -49,6 +54,7 @@ const CardList = (props) => {
     setInputPrice("");
   };
 
+  // function for lifting up state passed as a prop in CardItem
   const updateProductList = (type, index) => {
     if (type === "incr") {
       productList[index].amount++;
@@ -70,6 +76,7 @@ const CardList = (props) => {
     setProductList([...productList]);
   };
 
+  //clear button function
   const clearList = () => {
     setTotalPrice(0);
     setProductList([]);
@@ -117,7 +124,7 @@ const CardList = (props) => {
         })}
       </div>
       <div
-        style={{ display: totalPrice == 0 ? "none" : "flex" }}
+        style={{ display: totalPrice === 0 ? "none" : "flex" }}
         className="item-total"
       >
         <p>Total</p>
