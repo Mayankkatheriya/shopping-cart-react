@@ -103,6 +103,7 @@ const CardList = (props) => {
           Add
         </button>
       </div>
+      <p style={{display: (productList.length === 0) ? "block" : "none"}}>No Items to Show</p>
       <div className="card-list">
         {productList.map((item, idx) => {
           return (
